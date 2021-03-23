@@ -13,10 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin/dashboard', 'Admin\DashboardController@index')->middleware('role:admin');
+Route::get('/admin/materials', 'Admin\MaterialsController@index')->middleware('role:admin');
+Route::get('/admin/students', 'Admin\StudentsController@index')->middleware('role:admin');
+Route::get('/admin/student/add', 'Admin\StudentsController@showAdd')->middleware('role:admin');
+
+
+Route::get('/tutor/dashboard', 'Tutor\DashboardController@index')->middleware('role:tutor');
+Route::get('/student/dashboard', 'Student\DashboardController@index')->middleware('role:student');
+
+Route::get('/', 'HomeController@index')->name('home');

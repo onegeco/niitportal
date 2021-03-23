@@ -1044,11 +1044,15 @@ div.dataTables_wrapper div.row.uk-grid.dt-merge-grid {
 div.dataTables_wrapper div.dataTables_length label {
   font-weight: normal;
   text-align: left;
-  white-space: nowrap; }
+  white-space: nowrap; 
+}
 
 div.dataTables_wrapper div.dataTables_length select {
   width: 75px;
-  display: inline-block; }
+  display: inline-block;
+  border: 1px solid #ddd !important;
+  border-radius: 5px !important;
+  width: 100px !important; }
 
 div.dataTables_wrapper div.dataTables_filter {
   text-align: right; }

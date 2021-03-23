@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'E-Portal')
 
 @section('content')
 <div class="container">
@@ -15,6 +16,9 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout').submit();"><i data-feather="log-in"> </i><span>Sign Out</span></a><form id="logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+        {{ csrf_field() }}
+    </form></li>
                 </div>
             </div>
         </div>
