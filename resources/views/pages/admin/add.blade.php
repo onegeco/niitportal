@@ -30,139 +30,58 @@
             <div class="edit-profile">
               <div class="row">
                 <div class="col-xl-12">
-                  <form class="card">
+                  <form class="card" method="POST" action="{{ route('add') }}">
+                    @csrf
                     <div class="card-body">
                       <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                           <div class="mb-3">
                             <label class="form-label">First Name</label>
-                            <input class="form-control" type="text" placeholder="First name" name="first_name">
+                            <input class="form-control" type="text" placeholder="First name" name="first_name" required>
                           </div>
                         </div>
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label class="form-label">Middle Name</label>
+                                <input class="form-control" type="text" placeholder="Middle name" name="middle_name">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
                           <div class="mb-3">
-                            <label class="form-label">Username</label>
-                            <input class="form-control" type="text" placeholder="Username">
+                            <label class="form-label">Last name</label>
+                            <input class="form-control" type="text" placeholder="Last name" name="middle_name" required>
                           </div>
                         </div>
-                        <div class="col-sm-6 col-md-4">
+                        <div class="col-md-4">
                           <div class="mb-3">
-                            <label class="form-label">Email address</label>
-                            <input class="form-control" type="email" placeholder="Email">
+                            <label class="form-label">Email</label>
+                            <input class="form-control" type="email" placeholder="Email" name="email" required>
                           </div>
                         </div>
-                        <div class="col-sm-6 col-md-6">
+                        <div class="col-md-4">
                           <div class="mb-3">
-                            <label class="form-label">First Name</label>
-                            <input class="form-control" type="text" placeholder="Company">
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6">
-                          <div class="mb-3">
-                            <label class="form-label">Last Name</label>
-                            <input class="form-control" type="text" placeholder="Last Name">
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="mb-3">
-                            <label class="form-label">Address</label>
-                            <input class="form-control" type="text" placeholder="Home Address">
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4">
-                          <div class="mb-3">
-                            <label class="form-label">City</label>
-                            <input class="form-control" type="text" placeholder="City">
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                          <div class="mb-3">
-                            <label class="form-label">Postal Code</label>
-                            <input class="form-control" type="number" placeholder="ZIP Code">
-                          </div>
-                        </div>
-                        <div class="col-md-5">
-                          <div class="mb-3">
-                            <label class="form-label">Country</label>
-                            <select class="form-control btn-square">
-                              <option value="0">--Select--</option>
-                              <option value="1">Germany</option>
-                              <option value="2">Canada</option>
-                              <option value="3">Usa</option>
-                              <option value="4">Aus</option>
+                            <label class="form-label">Course</label>
+                            <select class="form-control btn-square" name="course" required>
+                              <option>--Select--</option>
+                              <option value="Management Information System">Management Information System</option>
+                              <option value="Python Programming">Python Programming</option>
+                              <option value="Web Development">Web Development</option>
+                              <option value="Web Design">Web Design</option>
                             </select>
                           </div>
                         </div>
-                        <div class="col-md-12">
-                          <div>
-                            <label class="form-label">About Me</label>
-                            <textarea class="form-control" rows="5" placeholder="Enter About your description"></textarea>
+                        <div class="col-md-4">
+                          <div class="mb-3">
+                            <label class="form-label">Mobile Number</label>
+                            <input class="form-control" type="text" placeholder="Mobile" required name="mobile">
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="card-footer text-end">
-                      <button class="btn btn-primary" type="submit">Update Profile</button>
+                      <button class="btn btn-primary" type="submit">Add Student</button>
                     </div>
                   </form>
-                </div>
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="card-header">
-                      <h4 class="card-title mb-0">Add projects And Upload</h4>
-                      <div class="card-options"><a class="card-options-collapse" href="#" data-bs-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a><a class="card-options-remove" href="#" data-bs-toggle="card-remove"><i class="fe fe-x"></i></a></div>
-                    </div>
-                    <div class="table-responsive add-project">
-                      <table class="table card-table table-vcenter text-nowrap">
-                        <thead>
-                          <tr>
-                            <th>Project Name</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                            <th>Price</th>
-                            <th></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td><a class="text-inherit" href="#">Untrammelled prevents </a></td>
-                            <td>28 May 2018</td>
-                            <td><span class="status-icon bg-success"></span> Completed</td>
-                            <td>$56,908</td>
-                            <td class="text-end"><a class="icon" href="javascript:void(0)"></a><a class="btn btn-primary btn-sm" href="javascript:void(0)"><i class="fa fa-pencil"></i> Edit</a><a class="icon" href="javascript:void(0)"></a><a class="btn btn-transparent btn-sm" href="javascript:void(0)"><i class="fa fa-link"></i> Update</a><a class="icon" href="javascript:void(0)"></a><a class="btn btn-danger btn-sm" href="javascript:void(0)"><i class="fa fa-trash"></i> Delete</a></td>
-                          </tr>
-                          <tr>
-                            <td><a class="text-inherit" href="#">Untrammelled prevents</a></td>
-                            <td>12 June 2018</td>
-                            <td><span class="status-icon bg-danger"></span> On going</td>
-                            <td>$45,087</td>
-                            <td class="text-end"><a class="icon" href="javascript:void(0)"></a><a class="btn btn-primary btn-sm" href="javascript:void(0)"><i class="fa fa-pencil"></i> Edit</a><a class="icon" href="javascript:void(0)"></a><a class="btn btn-transparent btn-sm" href="javascript:void(0)"><i class="fa fa-link"></i> Update</a><a class="icon" href="javascript:void(0)"></a><a class="btn btn-danger btn-sm" href="javascript:void(0)"><i class="fa fa-trash"></i> Delete</a></td>
-                          </tr>
-                          <tr>
-                            <td><a class="text-inherit" href="#">Untrammelled prevents</a></td>
-                            <td>12 July 2018</td>
-                            <td><span class="status-icon bg-warning"></span> Pending</td>
-                            <td>$60,123</td>
-                            <td class="text-end"><a class="icon" href="javascript:void(0)"></a><a class="btn btn-primary btn-sm" href="javascript:void(0)"><i class="fa fa-pencil"></i> Edit</a><a class="icon" href="javascript:void(0)"></a><a class="btn btn-transparent btn-sm" href="javascript:void(0)"><i class="fa fa-link"></i> Update</a><a class="icon" href="javascript:void(0)"></a><a class="btn btn-danger btn-sm" href="javascript:void(0)"><i class="fa fa-trash"></i> Delete</a></td>
-                          </tr>
-                          <tr>
-                            <td><a class="text-inherit" href="#">Untrammelled prevents</a></td>
-                            <td>14 June 2018</td>
-                            <td><span class="status-icon bg-warning"></span> Pending</td>
-                            <td>$70,435</td>
-                            <td class="text-end"><a class="icon" href="javascript:void(0)"></a><a class="btn btn-primary btn-sm" href="javascript:void(0)"><i class="fa fa-pencil"></i> Edit</a><a class="icon" href="javascript:void(0)"></a><a class="btn btn-transparent btn-sm" href="javascript:void(0)"><i class="fa fa-link"></i> Update</a><a class="icon" href="javascript:void(0)"></a><a class="btn btn-danger btn-sm" href="javascript:void(0)"><i class="fa fa-trash"></i> Delete</a></td>
-                          </tr>
-                          <tr>
-                            <td><a class="text-inherit" href="#">Untrammelled prevents</a></td>
-                            <td>25 June 2018</td>
-                            <td><span class="status-icon bg-success"></span> Completed</td>
-                            <td>$15,987</td>
-                            <td class="text-end"><a class="icon" href="javascript:void(0)"></a><a class="btn btn-primary btn-sm" href="javascript:void(0)"><i class="fa fa-pencil"></i> Edit</a><a class="icon" href="javascript:void(0)"></a><a class="btn btn-transparent btn-sm" href="javascript:void(0)"><i class="fa fa-link"></i> Update</a><a class="icon" href="javascript:void(0)"></a><a class="btn btn-danger btn-sm" href="javascript:void(0)"><i class="fa fa-trash"></i> Delete</a></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

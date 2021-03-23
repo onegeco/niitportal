@@ -18,7 +18,7 @@ Auth::routes();
 Route::get('/admin/dashboard', 'Admin\DashboardController@index')->middleware('role:admin');
 Route::get('/admin/materials', 'Admin\MaterialsController@index')->middleware('role:admin');
 Route::get('/admin/students', 'Admin\StudentsController@index')->middleware('role:admin');
-Route::get('/admin/student/add', 'Admin\StudentsController@showAdd')->middleware('role:admin');
+Route::get('/admin/student/add', 'Admin\StudentsController@showAdd')->name('add')->middleware('role:admin');
 
 
 Route::get('/tutor/dashboard', 'Tutor\DashboardController@index')->middleware('role:tutor');
