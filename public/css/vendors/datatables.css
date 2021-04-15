@@ -581,7 +581,7 @@ table.dataTable {
   table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_3 {
     background-color: #a5b2cb; }
   table.dataTable.no-footer {
-    border-bottom: 1px solid #111; }
+   /* border-bottom: 1px solid #111; */}
   table.dataTable.nowrap th, table.dataTable.nowrap td {
     white-space: nowrap; }
   table.dataTable.compact thead th,
@@ -1306,7 +1306,7 @@ table.dataTable {
   table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_3 {
     background-color: #a5b2cb; }
   table.dataTable.no-footer {
-    border-bottom: 1px solid #111; }
+    /*border-bottom: 1px solid #111*/; }
   table.dataTable.nowrap th, table.dataTable.nowrap td {
     white-space: nowrap; }
   table.dataTable.compact thead th,

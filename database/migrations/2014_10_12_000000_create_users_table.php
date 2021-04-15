@@ -19,9 +19,10 @@ class CreateUsersTable extends Migration
             $table->string('middle_name')->nullable();
             $table->string('last_name');
             $table->string('email')->unique();
+            $table->string('mobile')->unique();
             $table->string('reg_course')->nullable();
             $table->string('reg_id')->unique();
-            $table->string('roles')->nullable();
+            $table->string('roles');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
@@ -36,6 +37,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('niit_users');
     }
 }

@@ -30,36 +30,11 @@
               <!-- Base styles-->
               <div class="col-sm-12">
                 <div class="card">
-                  <div class="card-body">
-                    <div class="table-responsive">
-                      <table class="display" id="example-style-1">
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-                            <th>Reg Number</th>
-                            <th>Course</th>
-                            <th>Mobile Number</th>
-                            <th>Email</th>
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>System Architect</td>
-                            <td><a href="">Tiger Nixon</a></td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>
-                                <a class="badge badge-primary p-2" href="#"><i class="fas fa-eye"></i></a> <a class="badge badge-danger p-2" href="#"><i class="fas fa-trash"></i></a>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                  <div class="p-20">
+                    {!! $phpgrid_output !!}
                   </div>
                   <div class="card-footer text-center">
-                      <a href="/admin/student/add" class="btn btn-primary"><i class="fas fa-plus"></i> Add Student</a>
+                    <a href="/admin/student/add" class="btn btn-primary"><i class="fas fa-plus"></i> Add Student</a>
                   </div>
                 </div>
               </div>
